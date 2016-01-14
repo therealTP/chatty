@@ -1,4 +1,4 @@
-'use strict';
+// 'use strict';
 
 angular.module('chattyApp')
   .controller('MainCtrl', function ( $scope, messageService ) {
@@ -11,6 +11,8 @@ angular.module('chattyApp')
         messageService.addMessage(message).then(function ( response ) {
           $scope.messages = response.data;
         });
+      } else {
+        console.log("Please fill out both fields.");
       }
     };
 
